@@ -1,0 +1,21 @@
+{
+    "name": "Password manager app",
+    "short_name": "my passwords",
+    "start_url": ".",
+    "background_color": "#d0c1e0",
+    "theme_color": "#9874bd",
+    "orientation": "portrait",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "images/icon512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "images/icon128.png",
+            "sizes": "128x128",
+            "type": "image/png"
+        }
+    ]
+}

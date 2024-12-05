@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#9874bd">
+    <title>Менеджер паролей</title>
+    <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" href="main.css">
+    <link rel="apple-touch-icon" href="images/icon128.png">
+</head>
+
+<body>
+    <div><h2>my passwords</h2></div>
+    <div>
+        <table>
+            <tr>
+                <th><label class="required">Ссылка</label></th>
+                <th><input type="text" id="name-input" placeholder="ya.ru"></th>
+            </tr>
+            <tr>
+                <th><label>Описание</label></th>
+                <th><input type="text" id="description-input" placeholder="Доступ к Yandex ID"></th>
+            </tr>
+            <tr>
+                <th><label class="required">Логин</label></th>
+                <th><input type="text" id="login-input" placeholder="rrr"></th>
+            </tr>
+            <tr>
+                <th><label class="required">Пароль</label></th>
+                <th><input type="text" id="password-input" placeholder="qwerty123"></th>
+            </tr>
+        </table>
+    </div>
+    
+    <div><button class="randpassw-button" id="randpassw-button">Сгенерировать пароль</button></div>
+    <div><button id="add-button">Добавить</button></div>
+    <div id="passwords-list"></div>
+
+    <script src="script.js"></script>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js').then(registration => {
+                console.log("SW Registered!");
+                console.log(registration);
+            }).catch(error => {
+                console.log("SW Registered failed:(");
+                console.log(error);
+            });
+        }
+    </script>
+</body>
+
+</html>
